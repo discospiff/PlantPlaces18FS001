@@ -61,6 +61,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\ic_home.png" />
+    <Content Include="images\ic_table_chart.png" />
     <Content Include="images\redbud.jpg" />
     <Content Include="index.html" />
     <Content Include="Service1.svc" />
