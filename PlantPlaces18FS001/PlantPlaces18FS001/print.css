@@ -1,0 +1,10 @@
+﻿body {
+    background-color:white;
+}
+
+#content {
+    position:relative;
+}
+.noprint {
+    display:none;
+}

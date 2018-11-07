@@ -1,0 +1,17 @@
+﻿body {
+    background-color:#F4C53B;
+}
+#topnav {
+    position:fixed;
+    vertical-align:top;
+    height:4em;
+    width:100%;
+    z-index:100;
+    left:0;
+    top:0;
+    background-color:#8F3D52;
+}
+#content {
+    position:relative;
+    margin-top:4em;
+}
