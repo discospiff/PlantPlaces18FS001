@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<plant>
+  <genus>Asimina</genus>
+  <species>triloba</species>
+  <cultivar>Potomac</cultivar>
+  <common_name>Pawpaw</common_name>
+  <height>35</height>
+  <specimens>
+    <specimen>
+      <latitude>39.74</latitude>
+      <longitude>-84.51</longitude>
+      <description>A beautiful specimen, planted in 2008</description>
+      <planted_by>Checkers</planted_by>
+    </specimen>
+    <specimen>
+      <latitude>38.54</latitude>
+      <longitude>-84.49</longitude>
+      <description>In Fruit!</description>
+      <planted_by>Bugsy</planted_by>
+    </specimen>
+
+  </specimens>
+</plant>
