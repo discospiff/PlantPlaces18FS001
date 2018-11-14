@@ -6,21 +6,29 @@
   <cultivar>Potomac</cultivar>
   <common_name>Pawpaw</common_name>
   <height>35</height>
+  <begin_bloom_date>2018-04-01</begin_bloom_date>
+  <end_bloom_date>2018-04-15</end_bloom_date>
+  <edible>true</edible>
   <sun_tolerance>part_shade</sun_tolerance>
   <bloom_color>violet</bloom_color>
   <specimens>
     <specimen>
       <latitude>39.74</latitude>
       <longitude>-84.51</longitude>
-      <description>A beautiful specimen, planted in 2008</description>
+      <description>A beautiful specimen in my yard, planted in 2008</description>
       <planted_by>Checkers</planted_by>
     </specimen>
     <specimen>
-      <latitude>38.54</latitude>
-      <longitude>-84.49</longitude>
-      <description>In Fruit!</description>
+      <latitude>51.52</latitude>
+      <longitude>-0.54</longitude>
+      <description>RBG Kew</description>
       <planted_by>Bugsy</planted_by>
     </specimen>
-
+    <specimen>
+      <latitude>-25.63</latitude>
+      <longitude>-52.36</longitude>
+      <description>Brazil Botanic Gardens</description>
+      <planted_by>Bugsy</planted_by>
+    </specimen>
   </specimens>
 </plant>

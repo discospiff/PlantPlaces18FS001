@@ -80,10 +80,22 @@
 
     <xs:complexType name="specimenType">
       <xs:sequence>
-        <xs:element name="latitude" type="xs:string"/>
-        <xs:element name="longitude" type="xs:string"/>
-        <xs:element name="description" type="xs:string"/>
-        <xs:element name="planted_by" type="xs:string"/>
+        <xs:element name="latitude" type="xs:string" minOccurs="0"/>
+        <xs:element name="longitude" type="xs:string" minOccurs="0"/>
+        <xs:element name="description">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="1024"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+        <xs:element name="planted_by">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
       </xs:sequence>
     </xs:complexType>
 
