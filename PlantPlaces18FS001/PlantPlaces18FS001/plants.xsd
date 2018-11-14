@@ -3,10 +3,34 @@
   <xs:element name="plant">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="genus" type="xs:string"/>
-        <xs:element name="species" type="xs:string" minOccurs="0" default="spp."/>
-        <xs:element name="cultivar" type="xs:string" minOccurs="0"/>
-        <xs:element name="common_name" type="xs:string" minOccurs="0"/>
+        <xs:element name="genus">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="60"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+        <xs:element name="species" minOccurs="0" default="spp.">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="60"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+        <xs:element name="cultivar" minOccurs="0">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="60"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+        <xs:element name="common_name" minOccurs="0">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
         <xs:element name="height" minOccurs="0">
 			<xs:simpleType>
 				<xs:restriction base="xs:integer">
@@ -39,19 +63,22 @@
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:element>
-        <xs:element ref="specimens"/>
+  
+		  <xs:element name="specimens">
+			<xs:complexType>
+			  <xs:sequence>
+				<xs:element name="specimen" minOccurs="1" maxOccurs="unbounded" type="specimenType"/>
+			  </xs:sequence>
+			</xs:complexType>
+		  </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="specimens">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="specimen" maxOccurs="unbounded"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="specimen">
-    <xs:complexType>
+
+
+
+
+    <xs:complexType name="specimenType">
       <xs:sequence>
         <xs:element name="latitude" type="xs:string"/>
         <xs:element name="longitude" type="xs:string"/>
@@ -59,5 +86,5 @@
         <xs:element name="planted_by" type="xs:string"/>
       </xs:sequence>
     </xs:complexType>
-  </xs:element>
+
 </xs:schema>
