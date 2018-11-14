@@ -6,6 +6,8 @@
   <cultivar>Potomac</cultivar>
   <common_name>Pawpaw</common_name>
   <height>40</height>
+  <sun_tolerance>full_sun</sun_tolerance>
+  <bloom_color>blue</bloom_color>
   <specimens>
     <specimen>
       <latitude>39.74</latitude>
