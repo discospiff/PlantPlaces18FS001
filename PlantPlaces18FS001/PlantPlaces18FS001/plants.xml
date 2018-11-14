@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <plant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="plants.xsd">
+	xsi:noNamespaceSchemaLocation="plants.xsd"> 
   <genus>Asimina</genus>
   <species>triloba</species>
   <cultivar>Potomac</cultivar>
