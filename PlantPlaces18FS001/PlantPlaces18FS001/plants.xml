@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<plant>
+<plant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="plants.xsd">
   <genus>Asimina</genus>
   <species>triloba</species>
   <cultivar>Potomac</cultivar>
   <common_name>Pawpaw</common_name>
-  <height>35</height>
+  <height>40</height>
   <specimens>
     <specimen>
       <latitude>39.74</latitude>
