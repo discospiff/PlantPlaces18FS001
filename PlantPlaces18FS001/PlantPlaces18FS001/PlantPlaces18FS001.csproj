@@ -65,6 +65,9 @@
     <Content Include="images\ic_table_chart.png" />
     <Content Include="images\redbud.jpg" />
     <Content Include="index.html" />
+    <Content Include="plants.xsl">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="plants.xml">
       <SubType>Designer</SubType>
     </Content>
