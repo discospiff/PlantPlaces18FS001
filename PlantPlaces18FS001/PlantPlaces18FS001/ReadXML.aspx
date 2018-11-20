@@ -12,7 +12,7 @@
             <asp:Label ID="Label1" runat="server" Text="Submit your Plant XML"></asp:Label>
             <asp:FileUpload ID="FileUpload1" runat="server" />
             <br />
-            <asp:Button ID="BtnSubmit" runat="server" Text="Submit" />
+            <asp:Button ID="BtnSubmit" runat="server" OnClick="BtnSubmit_Click" Text="Submit" />
             <br />
             <asp:Label ID="Label2" runat="server" Text="XML Validation:"></asp:Label>
             <asp:Label ID="LblXMLValidation" runat="server"></asp:Label>

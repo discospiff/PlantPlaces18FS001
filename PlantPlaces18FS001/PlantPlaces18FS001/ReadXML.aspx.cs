@@ -13,5 +13,10 @@ namespace PlantPlaces18FS001
         {
 
         }
+
+        protected void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            LblXMLValidation.Text = "Button pressed.";
+        }
     }
 }
