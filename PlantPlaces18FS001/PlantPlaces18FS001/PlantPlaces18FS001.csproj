@@ -71,6 +71,7 @@
     <Content Include="plants.xml">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="ReadXML.aspx" />
     <Content Include="Service1.svc" />
     <Content Include="print.css" />
     <Content Include="mobile.css" />
@@ -78,6 +79,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ReadXML.aspx.cs">
+      <DependentUpon>ReadXML.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReadXML.aspx.designer.cs">
+      <DependentUpon>ReadXML.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

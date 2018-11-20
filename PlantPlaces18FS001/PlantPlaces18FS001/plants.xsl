@@ -7,17 +7,30 @@
             <title></title>
         </head>
         <body>
-            <table style="width:100%;">
-                <tr>
-                    <th>Latituide</th><th>Longitude</th><th>Description</th><th>Planted By</th>
-                </tr>
-                <xsl:for-each select="/plant/specimens/specimen">
+            <div>
+            <h1> My favorite plants!</h1>
+                <table style="width:100%;" border="1">
                     <tr>
-                        <td></td><td></td><td></td><td></td>
+                        <th>Latituide</th><th>Longitude</th><th>Description</th><th>Planted By</th>
                     </tr>
-                </xsl:for-each>
-            </table>
-
+                    <xsl:for-each select="/plant/specimens/specimen">
+                        <tr>
+                            <td>
+                                <xsl:value-of select="latitude"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="longitude"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="description"/>
+                            </td>
+                            <td>
+                                <xsl:value-of select="planted_by"/>
+                            </td>
+                        </tr>
+                    </xsl:for-each>
+                </table>
+            </div>
         </body>
         </html>
         </xsl:template>

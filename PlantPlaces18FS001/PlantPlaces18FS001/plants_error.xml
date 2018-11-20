@@ -2,6 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="plants.xsl"?>
 <plant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="plants.xsd"> 
+	<foo>bar </foo>
   <genus>Asimina</genus>
   <species>triloba</species>
   <cultivar>Potomac</cultivar>
