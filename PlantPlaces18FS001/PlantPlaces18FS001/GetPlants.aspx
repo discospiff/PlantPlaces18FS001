@@ -11,6 +11,7 @@
         <div>
             <asp:Button ID="BtnReadJSON" runat="server" OnClick="BtnReadJSON_Click" Text="Read JSON" />
         </div>
+        <asp:Label ID="LblJSONCount" runat="server" Text="JSON Count"></asp:Label>
     </form>
 </body>
 </html>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -21,6 +22,10 @@ namespace PlantPlaces18FS001
             {
                 String rawData =
                     webClient.DownloadString("http://www.plantplaces.com/perl/mobile/viewplantsjson.pl?Combined_Name=Oak");
+
+                PlantCollection plantCollection = JsonConvert.DeserializeObject<PlantCollection>(rawData);
+
+                LblJSONCount.Text =   ""+ plantCollection.Plants.Count;
             }
         }
     }
