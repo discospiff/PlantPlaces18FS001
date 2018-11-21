@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml;
 
 namespace PlantPlaces18FS001
 {
@@ -43,9 +44,16 @@ namespace PlantPlaces18FS001
         }
         protected void BtnSubmit_Click(object sender, EventArgs e)
         {
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load(fullFilePath);
+            doc.SelectSingleNode("/plant/specimens/specimen[latitude>0]");
             ValidateXML();
         }
 
+        /// <summary>
+        /// Validate our XML file against the XSD
+        /// </summary>
         public void ValidateXML()
         {
             // LblXMLValidation.Text = "Button pressed.";
