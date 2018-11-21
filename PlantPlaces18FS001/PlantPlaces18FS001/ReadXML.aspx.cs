@@ -9,6 +9,8 @@ namespace PlantPlaces18FS001
 {
     public partial class ReadXML : System.Web.UI.Page
     {
+        String fullFilePath;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack)
@@ -25,7 +27,9 @@ namespace PlantPlaces18FS001
                     {
                         // I have a valid file, I want to save it.
                         String path = Server.MapPath("~/XML/");
-                        XMLFileUpload.PostedFile.SaveAs(path + XMLFileUpload.FileName);
+                        
+                        fullFilePath = path + XMLFileUpload.FileName;
+                        XMLFileUpload.PostedFile.SaveAs(fullFilePath);
                         LblXMLValidation.Text = "File Uploaded";
                     }
                     else
