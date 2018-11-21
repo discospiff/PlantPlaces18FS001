@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
         <div>
             <asp:Label ID="Label1" runat="server" Text="Submit your Plant XML"></asp:Label>
-            <asp:FileUpload ID="FileUpload1" runat="server" />
+            <asp:FileUpload ID="XMLFileUpload" runat="server" />
             <br />
             <asp:Button ID="BtnSubmit" runat="server" OnClick="BtnSubmit_Click" Text="Submit" />
             <br />

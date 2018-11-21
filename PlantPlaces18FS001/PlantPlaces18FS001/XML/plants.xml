@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<plant>
+	<genus>Hibiscus</genus>
+	<species>mutabilis</species>
+	<common_name>Rose Mallow</common_name>
+	<specimens>
+		<specimen>
+			<latitude>39.74</latitude>
+			<longitude>-84.51</longitude>
+			<description>A beautiful specimen, planted 1999</description>
+			<planted_by>Brandan Jones</planted_by>
+		</specimen>
+		<specimen>
+			<latitude>39.48</latitude>
+			<longitude>-84.49</longitude>
+			<description>Facing Morgens hall</description>
+			<planted_by>Checkers Jenkins</planted_by>
+		</specimen>
+
+	</specimens>
+</plant>

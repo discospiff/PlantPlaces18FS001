@@ -94,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="XML\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="plants.xsd">

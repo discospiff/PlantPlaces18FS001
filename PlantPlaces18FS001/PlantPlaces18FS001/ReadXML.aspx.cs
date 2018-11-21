@@ -11,12 +11,40 @@ namespace PlantPlaces18FS001
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+            {
+                // only execute this logic if the user uploaded a file.
+                if (XMLFileUpload.HasFile)
+                {
+                    // did the user upload an XML File?
+                    String allowedExtension = ".xml";
+                    String fileName = XMLFileUpload.FileName;
+                    String extension = System.IO.Path.GetExtension(fileName).ToLower();
 
+                    if (allowedExtension == extension)
+                    {
+                        // I have a valid file, I want to save it.
+                        String path = Server.MapPath("~/XML/");
+                        XMLFileUpload.PostedFile.SaveAs(path + XMLFileUpload.FileName);
+                        LblXMLValidation.Text = "File Uploaded";
+                    }
+                    else
+                    {
+                        LblXMLValidation.Text = "File type not permitted";
+                    }
+
+
+                }
+            }
         }
-
         protected void BtnSubmit_Click(object sender, EventArgs e)
         {
-            LblXMLValidation.Text = "Button pressed.";
+            ValidateXML();
+        }
+
+        public void ValidateXML()
+        {
+            // LblXMLValidation.Text = "Button pressed.";
         }
     }
 }
