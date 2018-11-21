@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="plant">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="genus">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="60"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+        <xs:element name="species" minOccurs="0" default="spp.">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="60"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+        <xs:element name="cultivar" minOccurs="0">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="60"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+        <xs:element name="common_name" minOccurs="0">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="100"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+        <xs:element name="height" minOccurs="0">
+			<xs:simpleType>
+				<xs:restriction base="xs:integer">
+					<xs:minInclusive value="0"/>
+					<xs:maxInclusive value="200"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="begin_bloom_date" type="xs:date" minOccurs="0"/>
+		<xs:element name="end_bloom_date" type="xs:date" minOccurs="0"/>
+		<xs:element name="edible" type="xs:boolean" minOccurs="0"/>
+		<xs:element name="sun_tolerance" minOccurs="0">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="full_sun"/>
+					<xs:enumeration value="part_sun"/>
+					<xs:enumeration value="part_shade"/>
+					<xs:enumeration value="full_shade"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+		<xs:element name="bloom_color" minOccurs="0">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:enumeration value="white"/>
+					<xs:enumeration value="yellow"/>
+					<xs:enumeration value="red"/>
+					<xs:enumeration value="violet"/>
+					<xs:enumeration value="blue"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+  
+		  <xs:element name="specimens">
+			<xs:complexType>
+			  <xs:sequence>
+				<xs:element name="specimen" minOccurs="1" maxOccurs="unbounded" type="specimenType"/>
+			  </xs:sequence>
+			</xs:complexType>
+		  </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+
+
+    <xs:complexType name="specimenType">
+      <xs:sequence>
+        <xs:element name="latitude" type="xs:string" minOccurs="0"/>
+        <xs:element name="longitude" type="xs:string" minOccurs="0"/>
+        <xs:element name="description">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="1024"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+        <xs:element name="planted_by">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:maxLength value="255"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

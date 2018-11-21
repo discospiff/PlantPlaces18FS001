@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
+using System.Xml.Schema;
 
 namespace PlantPlaces18FS001
 {
@@ -47,16 +48,47 @@ namespace PlantPlaces18FS001
 
             XmlDocument doc = new XmlDocument();
             doc.Load(fullFilePath);
-            doc.SelectSingleNode("/plant/specimens/specimen[latitude>0]");
+            XmlNode node = doc.SelectSingleNode("/plant/specimens/specimen[latitude>0]");
             ValidateXML();
         }
 
-        /// <summary>
+        /// <summary>.
         /// Validate our XML file against the XSD
         /// </summary>
         public void ValidateXML()
         {
-            // LblXMLValidation.Text = "Button pressed.";
+            // Declare our validation preferences.'
+            XmlReaderSettings settings = new XmlReaderSettings();
+            // validate with XSD
+            settings.ValidationType = ValidationType.Schema;
+            // a couple more validation options.
+            settings.ValidationFlags |= System.Xml.Schema.XmlSchemaValidationFlags.ProcessSchemaLocation;
+            settings.ValidationFlags |= System.Xml.Schema.XmlSchemaValidationFlags.ReportValidationWarnings;
+
+            settings.ValidationEventHandler +=
+                new System.Xml.Schema.ValidationEventHandler(
+                    this.ValidationEventHandler);
+
+            XmlReader xmlReader = XmlReader.Create(fullFilePath, settings);
+            try
+            {
+                while (xmlReader.Read())
+                {
+
+                }
+                // we only get here if no exception was thrown.
+                LblXMLValidation.Text = "Validation successful";
+            } catch (Exception e)
+            {
+                // we only get here if there was a validation error.
+                LblXMLValidation.Text = e.Message;
+            }
+        }
+
+        private void ValidationEventHandler(object sender, ValidationEventArgs args)
+        {
+            LblXMLValidation.Text = "Validation failed.  Message = " + args.Message;
+            throw new Exception("Validation failed.  Message: " + args.Message);
         }
     }
 }

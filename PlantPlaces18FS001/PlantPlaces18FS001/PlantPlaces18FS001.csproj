@@ -94,7 +94,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="XML\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="plants.xsd">
@@ -105,6 +104,9 @@
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="XML\plants.xsd">
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <PropertyGroup>
