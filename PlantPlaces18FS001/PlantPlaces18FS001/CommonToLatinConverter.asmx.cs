@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Services;
 
@@ -20,16 +22,31 @@ namespace PlantPlaces18FS001
         [WebMethod]
         public string ConvertToLatinName(String commonName)
         {
+            // declare variable plant collection.
+            PlantCollection plantCollection;
+
             string returnValue = "HelloWorld";
-            if (commonName == "Oak")
+            using (var webClient = new WebClient())
             {
-                returnValue = "Quercus";
-            } else if (commonName == "Maple")
+                String rawData =
+                    webClient.DownloadString("http://www.plantplaces.com/perl/mobile/viewplantsjson.pl?Combined_Name=Oak");
+
+                // assign the variable plant collection.
+                 plantCollection = JsonConvert.DeserializeObject<PlantCollection>(rawData);
+
+             
+            }
+            // get the plant collection returned.
+            List<Plant> allPlants = plantCollection.Plants;
+            // shake hands with each plant.
+            foreach(Plant plant in allPlants)
             {
-                returnValue = "Acer";
-            } else if (commonName == "Pine")
-            {
-                returnValue = "Pinus";
+                // ask this plant if it contains our common name.
+                if (plant.Common.Contains(commonName))
+                {
+                    returnValue = plant.Genus;
+                }
+
             }
             return returnValue;
         }
