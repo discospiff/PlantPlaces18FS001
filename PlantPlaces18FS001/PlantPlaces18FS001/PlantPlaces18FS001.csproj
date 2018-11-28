@@ -64,6 +64,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AutoCompletePlantNames.aspx" />
     <Content Include="GetPlants.aspx" />
     <Content Include="images\ic_home.png" />
     <Content Include="images\ic_table_chart.png" />
@@ -86,6 +87,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutoCompletePlantNames.aspx.cs">
+      <DependentUpon>AutoCompletePlantNames.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutoCompletePlantNames.aspx.designer.cs">
+      <DependentUpon>AutoCompletePlantNames.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GetPlants.aspx.cs">
       <DependentUpon>GetPlants.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
