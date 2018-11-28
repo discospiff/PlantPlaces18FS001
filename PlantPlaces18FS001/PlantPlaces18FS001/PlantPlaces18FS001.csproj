@@ -80,6 +80,7 @@
     <Content Include="print.css" />
     <Content Include="mobile.css" />
     <Content Include="styles.css" />
+    <Content Include="VehicleTravel.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +105,14 @@
     </Compile>
     <Compile Include="IService1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vehicle.cs" />
+    <Compile Include="VehicleTravel.aspx.cs">
+      <DependentUpon>VehicleTravel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VehicleTravel.aspx.designer.cs">
+      <DependentUpon>VehicleTravel.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
