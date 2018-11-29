@@ -29,7 +29,7 @@ namespace PlantPlaces18FS001
             using (var webClient = new WebClient())
             {
                 String rawData =
-                    webClient.DownloadString("http://www.plantplaces.com/perl/mobile/viewplantsjson.pl?Combined_Name=Oak");
+                    webClient.DownloadString("http://www.plantplaces.com/perl/mobile/viewplantsjson.pl");
 
                 // assign the variable plant collection.
                  plantCollection = JsonConvert.DeserializeObject<PlantCollection>(rawData);

@@ -30,12 +30,14 @@ namespace PlantPlaces18FS001
 
             List<String> matchedPlants = new List<String>();
 
-            // iterate over these options, and show only ones that contain the user's text.
-            foreach(String plant in plantSuggestions)
-            {
-                if (plant.Contains(term))
+            if (term != null && term.Length > 0) { 
+                // iterate over these options, and show only ones that contain the user's text.
+                foreach(String plant in plantSuggestions)
                 {
-                    matchedPlants.Add(plant);
+                    if (plant.Contains(term))
+                    {
+                        matchedPlants.Add(plant);
+                    }
                 }
             }
 

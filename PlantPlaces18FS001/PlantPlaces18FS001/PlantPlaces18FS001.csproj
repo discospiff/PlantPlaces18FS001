@@ -72,7 +72,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="AutoCompletePlants.aspx" />
     <Content Include="CommonToLatinConverter.asmx" />
+    <Content Include="EnterPlants.html" />
     <Content Include="GetPlants.aspx" />
     <Content Include="images\ic_home.png" />
     <Content Include="images\ic_table_chart.png" />
@@ -108,6 +110,13 @@
     </Compile>
     <Compile Include="AutoCompletePlantNames.aspx.designer.cs">
       <DependentUpon>AutoCompletePlantNames.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AutoCompletePlants.aspx.cs">
+      <DependentUpon>AutoCompletePlants.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AutoCompletePlants.aspx.designer.cs">
+      <DependentUpon>AutoCompletePlants.aspx</DependentUpon>
     </Compile>
     <Compile Include="CommonToLatinConverter.asmx.cs">
       <DependentUpon>CommonToLatinConverter.asmx</DependentUpon>
