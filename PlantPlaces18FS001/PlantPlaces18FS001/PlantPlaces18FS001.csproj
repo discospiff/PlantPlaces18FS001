@@ -73,6 +73,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="AutoCompletePlants.aspx" />
+    <Content Include="CommonToGenus.asmx" />
     <Content Include="CommonToLatinConverter.asmx" />
     <Content Include="EnterPlants.html" />
     <Content Include="GetPlants.aspx" />
@@ -117,6 +118,10 @@
     </Compile>
     <Compile Include="AutoCompletePlants.aspx.designer.cs">
       <DependentUpon>AutoCompletePlants.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonToGenus.asmx.cs">
+      <DependentUpon>CommonToGenus.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="CommonToLatinConverter.asmx.cs">
       <DependentUpon>CommonToLatinConverter.asmx</DependentUpon>
